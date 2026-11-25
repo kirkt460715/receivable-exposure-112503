@@ -1,0 +1,129 @@
+{
+  "format": "jsonl",
+  "version": 1,
+  "tables": {
+    "segments": {
+      "summary": "发票确权分段",
+      "columns": {
+        "id": "分段",
+        "invoice": "发票",
+        "buyer": "付款义务人",
+        "supplier": "原始供应人",
+        "value": "面额分",
+        "confirmed_at": "确认时间",
+        "due_day": "到期日",
+        "sector": "风险行业"
+      },
+      "key": [
+        "id"
+      ],
+      "refs": {}
+    },
+    "rights": {
+      "summary": "逐分段受偿顺位与资金权益",
+      "columns": {
+        "id": "权益凭证",
+        "segment": "应收分段",
+        "lender": "出资方",
+        "rank": "受偿顺序",
+        "limit": "受偿上限分",
+        "starts": "效力起日",
+        "ends": "效力末日",
+        "record_at": "收到凭证时间",
+        "insurer": "核保方，可空"
+      },
+      "key": [
+        "id"
+      ],
+      "refs": {
+        "segment": "segments.id"
+      }
+    },
+    "groups": {
+      "summary": "买方归属调整，含实际生效日与知悉日",
+      "columns": {
+        "id": "核实号",
+        "buyer": "买方",
+        "group": "集团",
+        "from_day": "归属起日",
+        "observed_at": "信审获知时间"
+      },
+      "key": [
+        "id"
+      ],
+      "refs": {}
+    },
+    "payments": {
+      "summary": "业务凭据与入账、冲销流水",
+      "columns": {
+        "id": "流水行",
+        "segment": "已知归属，未识别可空",
+        "amount": "金额分",
+        "effective_day": "实际生效日",
+        "observed_at": "资料获知时间",
+        "type": "代收、冲销、对账、抵扣等来源性质",
+        "reference": "原流水号或相关证明，可空",
+        "state": "确认状态"
+      },
+      "key": [
+        "id"
+      ],
+      "refs": {
+        "segment": "segments.id"
+      }
+    },
+    "outcomes": {
+      "summary": "往期融资的到期表现与共因观察",
+      "columns": {
+        "id": "观察号",
+        "sector": "风险行业",
+        "event": "共因，空表示无共同冲击观察",
+        "buyer_paid": "买方回款比例",
+        "insurer_paid": "担保受理后给付比例，未观察为空",
+        "week_delay": "延期周，仍待为空",
+        "mature": "结果观察窗是否关闭",
+        "at": "截至日期"
+      },
+      "key": [
+        "id"
+      ],
+      "refs": {}
+    },
+    "funding": {
+      "summary": "待批、已批与实际资金动作",
+      "columns": {
+        "id": "资金记录",
+        "application": "申请或承诺号",
+        "segment": "相关确权分段",
+        "lender": "出资方",
+        "amount": "金额分",
+        "first_week": "最早可执行周",
+        "last_week": "最后可执行周",
+        "at": "记录时间",
+        "state": "拟申请、确认、实付或退回",
+        "reference": "先前凭证，可空"
+      },
+      "key": [
+        "id"
+      ],
+      "refs": {
+        "segment": "segments.id"
+      }
+    },
+    "scenarios": {
+      "summary": "信审维护的共因压力假设及其权重",
+      "columns": {
+        "id": "情景",
+        "label": "场景名称",
+        "affected_sector": "受影响范围，空为基础",
+        "shock": "同组买方和担保共因",
+        "weight": "业务假设权重",
+        "as_at": "采用时间"
+      },
+      "key": [
+        "id"
+      ],
+      "refs": {}
+    }
+  }
+}

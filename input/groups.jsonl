@@ -1,0 +1,10 @@
+{"id": "G1", "buyer": "B1", "group": "H2", "from_day": "2027-01-01", "observed_at": "2027-06-01T09:00:00+08:00"}
+{"id": "G2", "buyer": "B2", "group": "H3", "from_day": "2027-01-01", "observed_at": "2027-06-01T09:00:00+08:00"}
+{"id": "G3", "buyer": "B3", "group": "H4", "from_day": "2027-01-01", "observed_at": "2027-06-01T09:00:00+08:00"}
+{"id": "G4", "buyer": "B4", "group": "H1", "from_day": "2027-01-01", "observed_at": "2027-06-01T09:00:00+08:00"}
+{"id": "G5", "buyer": "B5", "group": "H2", "from_day": "2027-01-01", "observed_at": "2027-06-01T09:00:00+08:00"}
+{"id": "G6", "buyer": "B6", "group": "H3", "from_day": "2027-01-01", "observed_at": "2027-06-01T09:00:00+08:00"}
+{"id": "G7", "buyer": "B7", "group": "H4", "from_day": "2027-01-01", "observed_at": "2027-06-01T09:00:00+08:00"}
+{"id": "G8", "buyer": "B8", "group": "H1", "from_day": "2027-01-01", "observed_at": "2027-06-01T09:00:00+08:00"}
+{"id": "G9", "buyer": "B2", "group": "H2", "from_day": "2027-06-05", "observed_at": "2027-06-12T09:00:00+08:00"}
+{"id": "G10", "buyer": "B7", "group": "H2", "from_day": "2027-06-05", "observed_at": "2027-06-12T09:00:00+08:00"}

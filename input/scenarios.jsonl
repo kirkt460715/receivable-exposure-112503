@@ -1,0 +1,3 @@
+{"id": "BASE", "label": "历史可比观察", "affected_sector": null, "shock": false, "weight": 0.65, "as_at": "2027-06-06T09:00:00+08:00"}
+{"id": "STRESS", "label": "农产回款冲击", "affected_sector": "农产", "shock": true, "weight": 0.23, "as_at": "2027-06-06T09:00:00+08:00"}
+{"id": "EXT", "label": "配套回款冲击", "affected_sector": "配套", "shock": true, "weight": 0.12, "as_at": "2027-06-06T09:00:00+08:00"}
